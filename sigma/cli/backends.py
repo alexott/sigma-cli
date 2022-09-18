@@ -4,6 +4,7 @@ from sigma.backends.insight_idr import InsightIDRBackend
 from sigma.backends.qradar import QradarBackend
 from sigma.backends.elasticsearch import LuceneBackend
 from sigma.backends.opensearch import OpensearchLuceneBackend
+from sigma.backends.databricks import DatabricksBackend
 
 Backend = namedtuple("Backend", ("cls", "text", "formats", "requires_pipeline"))
 
@@ -33,4 +34,8 @@ backends = {
         "monitor_rule": "OpenSearch monitor rule with embedded Lucene query",
         "dsl_lucene": "OpenSearch query DSL with embedded Lucene queries",
     }, True),
+    "databricks": Backend(DatabricksBackend, "Databricks", {
+        "default": "Plain Databricks SQL queries",
+        "detection_yaml": "Yaml markup for Alex's small detection framework"
+    }, False),
 }

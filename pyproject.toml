@@ -32,6 +32,7 @@ pysigma-pipeline-windows = "^1.0.0"
 pysigma-backend-qradar = "^0.1.9"
 pysigma-backend-elasticsearch = "^0.1.0"
 pysigma-backend-opensearch = "^0.1.0"
+pysigma-backend-databricks = {path = "../databricks-sigma-backend/dist/pysigma_backend_databricks-0.1.0-py3-none-any.whl"}
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.2"
